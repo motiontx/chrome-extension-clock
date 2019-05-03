@@ -1,0 +1,12 @@
+{
+ 	"manifest_version": 2,
+ 	"name": "New Tab Clock",
+ 	"version": "0.5",
+	"description": "------------",
+	"icons": {
+		"128": "resources/assets/icon.png"
+	},
+  	"chrome_url_overrides" : {
+    	"newtab": "index.html"
+  	}
+}
