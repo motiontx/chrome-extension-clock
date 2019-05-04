@@ -3,24 +3,26 @@
 
 <head>
   <!-- CSS files-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/master.css">
 </head>
 
 <body>
-  <div class="flex">
-    <div id="clock"></div>
-    <div id="quote"></div>
-    <div id="author"></div>
+
+  <div class="head">
+    <p id="clock"></p>
+    <p id="quote"></p>
+    <p id="author"></p>
   </div>
-  <div id="canvas_container">
+
+  <div id="background">
     <canvas id="canvasTop"></canvas>
     <canvas id="canvasBot"></canvas>
     <canvas id="canvasSky"></canvas>
   </div>
+
   <!-- JavaScript files-->
-  <script src="resources/js/vector.js" charset="utf-8"></script>
-  <script src="resources/js/sky.js" charset="utf-8"></script>
-  <script src="resources/js/balls.js" charset="utf-8"></script>
+  <script src="resources/js/background.js" charset="utf-8"></script>
   <script src="resources/js/quotes.js" charset="utf-8"></script>
   <script src="resources/js/clock.js" charset="utf-8"></script>
 </body>

@@ -1,4 +1,4 @@
-html, body {
+html, body{
   width: 100%;
   height: 100%;
   margin: 0;
@@ -10,18 +10,12 @@ body {
   justify-content: center;
   align-items: center;
 
+  font-family: 'Lato', sans-serif;
+
   background: -webkit-linear-gradient(#00111e 30%, #033d5e);
   background: -moz-linear-gradient(#00111e 30%, #033d5e);
   background: -o-linear-gradient(#00111e 30%, #033d5e);
   background: linear-gradient(#00111e 30%, #033d5e);
-
-
-  /* background: linear-gradient(207deg, #050505, #050505);
-  background-size: 800% 800%;
-  -webkit-animation: gradientAnimation 2s ease infinite;
-  -moz-animation: gradientAnimation 2s ease infinite;
-  -o-animation: gradientAnimation 2s ease infinite;
-  animation: gradientAnimation 2s ease infinite; */
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -32,11 +26,44 @@ body {
                                 supported by Chrome and Opera */
 }
 
-#canvas_container {
+.head{
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#clock{
+  margin: 0;
+  font-size: 10rem;
+  font-weight: 400;
+}
+
+#quote{
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+  border-left: 2px solid #ddd;
+  text-align: right;
+  max-width: 37rem;
+  font-weight: 300;
+}
+
+#author{
+  margin: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  border-right: 2px solid #ddd;
+  text-align: right;
+  font-weight: 700;
+}
+
+#background {
+  position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
 }
 
 #canvasTop{
@@ -45,65 +72,11 @@ body {
 }
 
 #canvasBot{
-  position: absolute;
+  position:absolute;
   z-index: -100;
 }
 
 #canvasSky{
-  position: absolute;
+  position:absolute;
   z-index:  -200;
-}
-
-@-webkit-keyframes gradientAnimation {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-@-moz-keyframes gradientAnimation {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-@-o-keyframes gradientAnimation {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-@keyframes gradientAnimation {
-    0%{background-position:50% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0%}
-}
-
-.flex{
-  color: #ddd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  max-width: 580px;
-}
-
-#clock{
-  font-size: 10rem;
-}
-
-#quote{
-  margin: 0.5rem;
-  padding-left: 0.5rem;
-  font-size: 1rem;
-  border-left: 2px solid white;
-  text-align: right;
-  max-width: inherit;
-
-}
-
-#author{
-  margin: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 1rem;
-  border-right: 2px solid white;
-  text-align: right;
-  max-width: inherit;
-
 }

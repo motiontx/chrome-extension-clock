@@ -1,7 +1,7 @@
 {
  	"manifest_version": 2,
  	"name": "New Tab Clock",
- 	"version": "0.5",
+ 	"version": "0.6",
 	"description": "------------",
 	"icons": {
 		"128": "resources/assets/icon.png"
