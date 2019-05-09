@@ -1,6 +1,6 @@
-// --------------------------------------------------------------------
-// ►►► </> with ♥ by Vittorio Retrivi ◄◄◄ -----------------------------
-// --------------------------------------------------------------------
+// ----------------------------------------------------------------- //
+// ------------- ►►► </> with ♥ by Vittorio Retrivi ◄◄◄ ------------ //
+// ----------------------------------------------------------------- //
 
 const background = document.getElementById("background");
 const canvasTop = document.getElementById('canvasTop');
@@ -14,6 +14,8 @@ const ctxSky = canvasSky.getContext('2d');
 
 const colorsTop = ["#343d4655", "#4f5b6655", "#65737e55", "#a7adba55"];
 const colorsBot = ["#105B6388", "#FFFAD588", "#FFD34E88", "#DB9E3688", "#BD493288"];
+
+const mathPI2 = 2 * Math.PI;
 
 let systemTop;
 let systemBot;
@@ -103,13 +105,6 @@ class Vector {
     this.y /= mag;
   };
 
-  rotate(angle) {
-    let x = this.x * Math.cos(angle) - this.y * Math.sin(angle);
-    let y = this.x * Math.sin(angle) + this.y * Math.cos(angle);
-    this.x = x;
-    this.y = y;
-  }
-
   mag() {
     return Math.hypot(this.x, this.y);
   }
@@ -145,10 +140,8 @@ class Particle {
 
   draw(ctx) {
     ctx.fillStyle = this.color;
-    ctx.shadowBlur = 100;
-    ctx.shadowColor = this.color;
     ctx.beginPath();
-    ctx.arc(this.pos.x, this.pos.y, this.radius + this.radius2, 0, 2 * Math.PI);
+    ctx.arc(this.pos.x, this.pos.y, this.radius + this.radius2, 0, mathPI2);
     ctx.fill();
   }
 }
@@ -192,9 +185,7 @@ class ParticleSystem {
   }
 
   draw() {
-    this.ctx.globalCompositeOperation = "lighter"
     this.ctx.clearRect(0, 0, width, height);
-    this.ctx.fillStyle = "#fff"
     for (let particle of this.particles) {
       particle.draw(this.ctx);
     }
